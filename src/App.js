@@ -28,7 +28,6 @@ function App() {
   function handleGuessSubmit() {
     if (userGuess === '') {
       setMessage('Please enter a valid guess.');
-      return;
     }
 
     const guess = parseInt(userGuess, 10);
@@ -48,7 +47,7 @@ function App() {
   return (
     <div className="container">
       <div className="box">
-        <p className="rand">{randomNumber}</p>
+        <p className="rand">{guessedNumbers.length >= numberOfTry && randomNumber}</p>
         <h1>Number guessing game</h1>
         <p>
           We have selected a random number between 1 and 100. See if you can
