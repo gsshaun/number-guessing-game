@@ -41,7 +41,7 @@ function App() {
       setMessage('Try again. Your guess is too high.');
     }
 
-    setGuessedNumbers([...guessedNumbers, guess]);
+    userGuess != '' && setGuessedNumbers([...guessedNumbers, guess]);
     setUserGuess('');
   }
 
