@@ -57,12 +57,15 @@ function App() {
         <div className="guess">
           <label htmlFor="guessField">Enter a guess: </label>
           <input
-            type="number"
+            type="text"
             id="guessField"
             className="guessField"
             value={userGuess}
             disabled={guessedNumbers.length >= numberOfTry}
-            onChange={(e) => setUserGuess(e.target.value)}
+            onChange={(e) => {
+              const inputValue = e.target.value.replace(/\D/g, "");
+                setUserGuess(inputValue);
+            }}
           />
           <input
             type="submit"
