@@ -56,38 +56,50 @@ p {
 }
 
 .lastResult {
+  transition: background-color 0.3s, color 0.3s;
   margin: 10px 0;
   border-radius: 10px;
   padding: 10px;
-  background: red;
+  background: linear-gradient(to bottom, #e40a0a, #d11313);
   color: white;
 }
 
 .lastResult.correct {
+  transition: background-color 0.3s, color 0.3s;
   margin: 10px 0;
   border-radius: 10px;
   padding: 10px;
-  background: rgb(106, 175, 2);
+  background: linear-gradient(to bottom, #0ec90e, #2ee03d);
   color: white;
 }
 
 .startNew,
 .gameOver {
-  color: #fff;
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .startNew {
-  background-color: #28a745;
-  width: 120px;
+  transition: background-color 0.3s, color 0.3s;
+  background: linear-gradient(to bottom, #34b64a, #228c2e);
+  color: white;
+  width: 200px;
   display: block;
-  margin: 0 auto;
+  text-align: center;
+  font-size: large;
+  margin: 20px auto 0;
   cursor: pointer;
 }
 
 .gameOver {
   background-color: blue;
-  width: 100px;
-  border-radius: 10px;
+  color: white;
+  text-align: center;
+  font-size: x-large;
+  width: 300px;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 5px;
 }
+
+
