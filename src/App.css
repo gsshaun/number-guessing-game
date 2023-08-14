@@ -76,7 +76,6 @@ p {
   color: #fff;
   border: none;
   padding: 10px;
-  cursor: pointer;
 }
 
 .startNew {
@@ -84,6 +83,7 @@ p {
   width: 120px;
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .gameOver {
