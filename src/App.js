@@ -32,6 +32,7 @@ function App() {
   function handleGuessSubmit() {
     if (userGuess === '') {
       setMessage('Please enter a valid guess.');
+      return;
     }
 
     const guess = parseInt(userGuess, 10);
