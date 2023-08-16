@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-
   // Number of Try
-  const numberOfTry = 3;
-
+  const numberOfTry = 4;
   const [randomNumber, setRandomNumber] = useState(generateRandomNumber()); // Random Number
   const [userGuess, setUserGuess] = useState(''); // User Input
   const [message, setMessage] = useState(''); // Message
@@ -99,5 +97,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
