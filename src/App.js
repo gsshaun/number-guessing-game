@@ -12,7 +12,7 @@ function App() {
   // Set First-Time Number
   useEffect(() => {
     handleStartNewGame();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Generate New Number
@@ -28,10 +28,19 @@ function App() {
     setGuessedNumbers([]);
   }
 
+  // Keep Focus
+  function keepFocus(id) {
+    return id.focus();
+  }
+
   // Handle Submit
   function handleGuessSubmit() {
+    const guessField = document.getElementById('guessField');
+
     if (userGuess === '') {
       setMessage('Please enter a valid guess.');
+      keepFocus(guessField)
+      // guessField.focus();
       return;
     }
 
@@ -47,6 +56,7 @@ function App() {
 
     userGuess !== '' && setGuessedNumbers([...guessedNumbers, guess]);
     setUserGuess('');
+    keepFocus(guessField)
   }
 
   return (
@@ -69,7 +79,7 @@ function App() {
             disabled={guessedNumbers.length >= numberOfTry}
             onChange={(event) => {
               const inputValue = event.target.value.replace(/\D/g, "");
-                setUserGuess(inputValue);
+              setUserGuess(inputValue);
             }}
           />
           <input
