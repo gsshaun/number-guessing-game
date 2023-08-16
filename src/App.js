@@ -3,21 +3,26 @@ import './App.css';
 
 function App() {
 
+  // Number of Try
   const numberOfTry = 3;
 
-  const [randomNumber, setRandomNumber] = useState(generateRandomNumber());
-  const [userGuess, setUserGuess] = useState('');
-  const [message, setMessage] = useState('');
-  const [guessedNumbers, setGuessedNumbers] = useState([]);
+  const [randomNumber, setRandomNumber] = useState(generateRandomNumber()); // Random Number
+  const [userGuess, setUserGuess] = useState(''); // User Input
+  const [message, setMessage] = useState(''); // Message
+  const [guessedNumbers, setGuessedNumbers] = useState([]); // user Input Array
 
+  // Set First-Time Number
   useEffect(() => {
     handleStartNewGame();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Generate New Number
   function generateRandomNumber() {
     return Math.floor(Math.random() * 100) + 1;
   }
 
+  // Handle New Game
   function handleStartNewGame() {
     setRandomNumber(generateRandomNumber());
     setUserGuess('');
@@ -25,6 +30,7 @@ function App() {
     setGuessedNumbers([]);
   }
 
+  // Handle Submit
   function handleGuessSubmit() {
     if (userGuess === '') {
       setMessage('Please enter a valid guess.');
@@ -40,7 +46,7 @@ function App() {
       setMessage('Try again. Your guess is too high.');
     }
 
-    userGuess != '' && setGuessedNumbers([...guessedNumbers, guess]);
+    userGuess !== '' && setGuessedNumbers([...guessedNumbers, guess]);
     setUserGuess('');
   }
 
@@ -62,8 +68,8 @@ function App() {
             className="guessField"
             value={userGuess}
             disabled={guessedNumbers.length >= numberOfTry}
-            onChange={(e) => {
-              const inputValue = e.target.value.replace(/\D/g, "");
+            onChange={(event) => {
+              const inputValue = event.target.value.replace(/\D/g, "");
                 setUserGuess(inputValue);
             }}
           />
@@ -76,7 +82,7 @@ function App() {
           />
         </div>
         <div className="resultParas">
-          {guessedNumbers.length != 0 && <p className="guesses">
+          {guessedNumbers.length !== 0 && <p className="guesses">
             Guessed Numbers: {guessedNumbers.join(', ')}
           </p>}
           {message && <p className={`lastResult ${message.includes('Congratulations!') ? 'correct' : ''}`}>{message}</p>}
