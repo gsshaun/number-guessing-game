@@ -1,4 +1,4 @@
-# Number Guessing Game
+## Number Guessing Game
 
 This is a simple number guessing game built using React. The game selects a random number between 1 and 100, and the player needs to guess the correct number within a certain number of tries.
 
