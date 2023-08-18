@@ -1,6 +1,27 @@
-# Create React App
+```markdown
+# Number Guessing Game
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+This is a simple number guessing game built using React. The game selects a random number between 1 and 100, and the player needs to guess the correct number within a certain number of tries.
+
+## Getting Started
+
+To run the game on your local machine, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/number-guessing-game.git
+cd number-guessing-game
+```
+
+2. Install dependencies and start the development server:
+
+```bash
+npm install
+npm start
+```
+
+The game should now be accessible at `http://localhost:3000` in your web browser.
 
 ## Deploy Your Own
 
@@ -10,22 +31,33 @@ Deploy your own Create React App project with Vercel.
 
 _Live Example: https://create-react-template.vercel.app/_
 
-## Available Scripts
+## How to Play
 
-In the project directory, you can run:
+1. The game has selected a random number between 1 and 100.
 
-### `npm start`
+2. Enter your guess in the input field and click "Submit Guess."
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. The game will provide feedback on whether your guess is too high or too low.
 
-The page will reload when you make changes. You may also see any lint errors in the console.
+4. Keep guessing until you've reached the maximum number of tries or you guess the correct number.
 
-### `npm test`
+5. Once the game is over, you can start a new game by clicking "Start New Game."
 
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Randomly generated target number between 1 and 100.
+- Limited number of tries (configurable).
+- Feedback on whether the guess is too high or too low.
+- Start a new game after the current game is over.
 
-Builds the app for production to the `build` folder.
+## Technologies Used
 
-It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+- React: Front-end framework
+- JavaScript: Programming language
+- CSS: Styling
+
+
+---
+
+Feel free to contribute to this project by submitting issues or pull requests. Happy guessing!
+```
