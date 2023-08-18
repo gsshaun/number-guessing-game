@@ -56,7 +56,5 @@ _Live Example: https://number-guessing-game-mu-one.vercel.app/
 - JavaScript: Programming language
 - CSS: Styling
 
-
 ---
-
 Feel free to contribute to this project by submitting issues or pull requests. Happy guessing!
