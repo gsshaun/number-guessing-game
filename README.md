@@ -10,7 +10,7 @@ To run the game on your local machine, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/number-guessing-game.git
+git clone https://github.com/gsshaun/number-guessing-game.git
 cd number-guessing-game
 ```
 
@@ -21,15 +21,16 @@ npm install
 npm start
 ```
 
-The game should now be accessible at `http://localhost:3000` in your web browser.
+The game should now be accessible at `http://localhost` in your web browser.
 
 ## Deploy Your Own
 
 Deploy your own Create React App project with Vercel.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/gsshaun/number-guessing-game)
 
-_Live Example: https://create-react-template.vercel.app/_
+_Live Example: https://number-guessing-game-mu-one.vercel.app/
+
 
 ## How to Play
 
